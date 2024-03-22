@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3dfcc3ea5944b7d4d94a455d494c8923
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - game_manager: {fileID: 602224790020542308, guid: dbb3d1bd465c3404fbf8e107075e9d7c, type: 3}
+  - level_manager: {fileID: 1244553552299098035, guid: 8e3a57865288cfd44aeac6228800067f, type: 3}
+  - spawn_manager: {fileID: 1839571208671403943, guid: e93b27ee91fc04d4fbfab99fd66be4ab, type: 3}
+  - input_manager: {fileID: 1436102680216736777, guid: 265bcbb882b094741b927ba535fd0596, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
