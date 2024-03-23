@@ -42,7 +42,7 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        Vector2 mapCenter = LevelManager.instance.groundInstance.transform.position;
+        Vector2 mapCenter = LevelManager.instance.GroundInstance.transform.position;
         _playerOnLevel = Instantiate(_playerPrefab, mapCenter, Quaternion.identity);
         CinemachineVirtualCamera _activeCamera = Instantiate(_cameraPrefab, _playerPrefab.transform.position, Quaternion.identity);
         _activeCamera.m_Follow = _playerOnLevel.transform;

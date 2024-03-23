@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance = null;
 
-    public GameObject groundInstance {  get; private set; }
+    public GameObject GroundInstance {  get; private set; }
     public List<Vector2> availableGridPositions = new();
 
     [SerializeField] private int _height = 100;
@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
     }
     private void SetupMap()
     {
-        GameObject map = new GameObject("Map");
+        GameObject map = new ("Map");
         CreateGround(_width, _height, map);
         CreateBorders(map);
         CreateObstacles(_wallBaseCount, map);
@@ -59,12 +59,12 @@ public class LevelManager : MonoBehaviour
     
     private void CreateGround(int heigth, int width, GameObject map)
     {
-        groundInstance = Instantiate(_groundPrefab, new Vector2( width / 2, heigth / 2), Quaternion.identity, map.transform);
-        groundInstance.transform.localScale = new Vector2(heigth, width);
+        GroundInstance = Instantiate(_groundPrefab, new Vector2( width / 2, heigth / 2), Quaternion.identity, map.transform);
+        GroundInstance.transform.localScale = new Vector2(heigth, width);
     }
     private void CreateBorders(GameObject parent)
     {
-        GameObject borders = new GameObject("Borders");
+        GameObject borders = new ("Borders");
         borders.transform.SetParent(parent.transform, true);
         for (float x = 0f; x <= _height; x++)
         {
