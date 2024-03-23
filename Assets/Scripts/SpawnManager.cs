@@ -51,7 +51,7 @@ public class SpawnManager : MonoBehaviour
     private void SpawnEnemy()
     { 
         _spawnPoint = RandomSpawnPosition();
-        if (Vector2.Distance(_spawnPoint, _playerOnLevel.transform.position) > 10)
+        if (Vector2.Distance(_spawnPoint, _playerOnLevel.transform.position) > 20f)
          {
                Instantiate(_enemyPrefab, _spawnPoint, Quaternion.identity);   // можно ли в else повторить этот же метод, если условие не сработает
          }
