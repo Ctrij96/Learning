@@ -19,13 +19,10 @@ public class Weapon : MonoBehaviour
         {
             _firingTimer -= Time.deltaTime;
         }
-        if (InputManager.instance.LeftMousePressed())
+        if (PlayerController._playerInput.Player.Fire.IsPressed() && _firingTimer <= 0)
         {
-            if (_firingTimer <= 0)
-            {
-                Shoot();
-                _firingTimer += _fireDelay;
-            }
+            Shoot();
+            _firingTimer += _fireDelay;
         }
     }
 

@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerInput _playerInput;
 
     [SerializeField] private float _playerMaxHealth = 100f;
     [SerializeField] private float _playerHealth;
@@ -17,12 +18,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb2d;
     private Collider2D _collider2d;
 
+
     private void Awake()
     {
         _rb2d = GetComponent<Rigidbody2D>();
         _collider2d = GetComponent<Collider2D>();
         _playerUI = GetComponentInChildren<PlayerUI>();
         _playerHealth = _playerMaxHealth;
+        _playerInput = new PlayerInput();
+        _playerInput.Enable();
     }
 
     private void FixedUpdate()
@@ -34,13 +38,13 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        Vector2 inputVector = InputManager.instance.GetMovementVector().normalized;
+        Vector2 inputVector = _playerInput.Player.Move.ReadValue<Vector2>();
         _rb2d.MovePosition(_rb2d.position + inputVector * (_speed * Time.fixedDeltaTime));
     }
 
     private void RotatePlayer()
     {
-        Vector2 direction = Camera.main.ScreenToWorldPoint(InputManager.instance.GetMousePosition()) - transform.position;
+        Vector2 direction = Camera.main.ScreenToWorldPoint(_playerInput.Player.Look.ReadValue<Vector2>()) - transform.position;
         float rotateZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.Find("PlayerAxis").rotation = Quaternion.Euler(0, 0, rotateZ + _offset);
     }

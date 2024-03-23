@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 4862315205275146084}
   - component: {fileID: 7836970462892681203}
   - component: {fileID: 4276007722850276007}
-  - component: {fileID: 1870102134314688201}
+  - component: {fileID: 1520570855170233827}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -332,7 +332,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1870102134314688201
+--- !u!114 &1520570855170233827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929757511931140915}
-  - component: {fileID: 8681320854838593651}
+  - component: {fileID: 8262213683991608059}
   m_Layer: 0
   m_Name: firePoint
   m_TagString: Untagged
@@ -646,7 +646,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5514228235633788562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8681320854838593651
+--- !u!114 &8262213683991608059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
