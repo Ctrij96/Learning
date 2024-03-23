@@ -266,7 +266,6 @@ MonoBehaviour:
   game_manager: {fileID: 602224790020542308, guid: dbb3d1bd465c3404fbf8e107075e9d7c, type: 3}
   level_manager: {fileID: 1244553552299098035, guid: 8e3a57865288cfd44aeac6228800067f, type: 3}
   spawn_manager: {fileID: 1839571208671403943, guid: e93b27ee91fc04d4fbfab99fd66be4ab, type: 3}
-  input_manager: {fileID: 4193469438464805676, guid: 26411a6cf70b80a44a8e3653a2f512af, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
